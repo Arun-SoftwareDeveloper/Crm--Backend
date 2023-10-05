@@ -97,7 +97,7 @@ async function forgotPassword(req, res) {
       html: `
         <p>Hello ${user.firstName},</p>
         <p>Click the following link to reset your password for your CRM-Application:</p>
-        <a href="http://localhost:3000/resetpassword/${token}">Reset Password</a>
+        <a href="https://main--rococo-pixie-ec3d7e.netlify.app/${token}">Reset Password</a>
       `,
     };
 

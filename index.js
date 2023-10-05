@@ -10,16 +10,20 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-
+const dbUrl =
+  "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majority/CRM_DATABASE";
 // Database Setup
 mongoose
-  .connect("mongodb://0.0.0.0:27017/CRM", {
+  .connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     console.log("Connected to MongoDB");
     // Start your server or perform any other operations here
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
   });
 
 // Routes

@@ -96,7 +96,7 @@ async function forgotPassword(req, res) {
       subject: "Reset Your Password",
       html: `
         <p>Hello ${user.firstName},</p>
-        <p>Click the following link to reset your password:</p>
+        <p>Click the following link to reset your password for your CRM-Application:</p>
         <a href="http://localhost:3000/resetpassword/${token}">Reset Password</a>
       `,
     };

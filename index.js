@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 const dbUrl =
-  "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majority/CRM_DATABASE";
+  "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majority";
 // Database Setup
 mongoose
   .connect(dbUrl, {

@@ -9,9 +9,9 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: "https://rococo-pixie-ec3d7e.netlify.app/" }));
 const dbUrl =
-  "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majoritygi";
 // Database Setup
 mongoose
   .connect(dbUrl, {

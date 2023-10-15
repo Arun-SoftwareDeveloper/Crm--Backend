@@ -7,9 +7,18 @@ const adduserRoutes = require("./Routes/AddUserRoutes");
 
 const app = express();
 
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://rococo-pixie-ec3d7e.netlify.app/",
+    ],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 // Middleware
 app.use(bodyParser.json());
-app.use(cors({ origin: "https://rococo-pixie-ec3d7e.netlify.app/" }));
 const dbUrl =
   "mongodb+srv://arunramasamy46:arunramasamy46@cluster0.o2mu7nq.mongodb.net/?retryWrites=true&w=majoritygi";
 // Database Setup
